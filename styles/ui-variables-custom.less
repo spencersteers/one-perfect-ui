@@ -4,7 +4,11 @@
 
 @import "syntax-variables";
 
+// @syntax-background-color: hsl(220, 13%, 18%);
+
 .ui-syntax-color() { @syntax-background-color: hsl(220,24%,20%); } .ui-syntax-color(); // fallback color
+
+// @syntax-background-color: hsl(220, 8%, 15%);
 @ui-syntax-color: @syntax-background-color;
 
 // Color guards -----------------
@@ -50,6 +54,26 @@
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 20%);
 
+
+// Stolen from stripe
+@ui-blue:   #0099e5;
+@ui-green:  #24b47e;
+@ui-red:    #E25950;
+@ui-orange: #f5be58;
+
+// my terminal
+@ui-blue:   #72bef2;
+@ui-green:  #a7cc8c;
+@ui-red:    #e88388;
+@ui-orange: #dbaa79;
+
+@text-color-info:    @ui-blue;
+@text-color-success: @ui-green;
+@text-color-warning: @ui-orange;
+@text-color-error:   @ui-red;
+
+
+
 @text-color-added:    @text-color-success;  // green
 @text-color-ignored:  @text-color-subtle;   // faded
 @text-color-modified: @text-color-warning;  // orange
@@ -93,7 +117,7 @@
 @input-selection-color-focus:       mix(@accent-color, @input-background-color, 50%);
 
 @overlay-backdrop-color:            hsl(@ui-hue,@ui-saturation,10%);
-@overlay-backdrop-opacity:          .9;
+@overlay-backdrop-opacity:          0;
 
 @progress-background-color:         @accent-color;
 

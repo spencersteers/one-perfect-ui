@@ -91,7 +91,7 @@
       transform: scale(0);
       transition: transform .08s;
       &:hover {
-        color: @accent-text-color;
+        color: @tab-text-color-active;
         background-color: @accent-color;
       }
       &:active {
@@ -108,7 +108,7 @@
     }
     &:hover .close-icon {
       transform: scale(1);
-      transition-duration: .16s;
+      transition-duration: .08s;
     }
   }
 
@@ -137,7 +137,6 @@
       }
     }
   }
-
 
   // Tabs in the docks ----------------------
 
@@ -206,21 +205,6 @@
       padding: 0;
     }
   }
-}
-
-
-// Active pane marker --------------
-
-atom-pane.active .tab.active:before {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  top: 0;
-  left: -1px; // cover left border
-  bottom: 0;
-  width: 2px;
-  background: @accent-color;
 }
 
 // hide marker in docks

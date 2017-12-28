@@ -35,3 +35,27 @@
   border-color: @accent-color;
   box-shadow: 0 0 0 1px @accent-color;
 }
+
+.text(light) {
+  font-weight: 300;
+}
+
+.text(bold) {
+  font-weight: 600;
+}
+
+.text(invert) {
+  color: @app-background-color;
+}
+
+.transition() {
+  transition: 400ms all ease;
+}
+
+.transition(@property) {
+  transition: 400ms @property ease;
+}
+
+.shadow() {
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.4) !important;
+}

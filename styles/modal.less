@@ -14,21 +14,29 @@ atom-panel.modal {
   margin: 0 auto;
   left: initial;
   color: @text-color;
-  background-color: transparent;
-  padding: @ui-padding/2;
+  background-color: @overlay-background-color;
+  padding: @ui-padding/2 0;
 
   &.from-top {
     top: @component-padding * 5;
   }
 
   atom-text-editor[mini] {
-    margin-bottom: @ui-padding/2;
+    margin: @ui-padding/2;
+    margin-top: 0;
+  }
+  
+  // project is empty text
+  .select-list > span,
+  .select-list > .error-message,
+  .select-list > .text-smaller,
+  .select-list > .loading {
+    padding: @modal-padding;
   }
 
   .select-list ol.list-group,
   &.select-list ol.list-group {
-    border: 1px solid @overlay-border-color;
-    background-color: lighten(@overlay-background-color, 2%);
+    background-color: @overlay-background-color;
 
     &:empty {
       border: none;
@@ -38,7 +46,6 @@ atom-panel.modal {
     li {
       padding: @modal-padding;
       line-height: @ui-line-height;
-      border-bottom: 1px solid @overlay-border-color;
 
       &:last-of-type {
         border-bottom: none;

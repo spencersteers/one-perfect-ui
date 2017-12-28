@@ -1,3 +1,4 @@
+@import "syntax-variables";
 
 // Editor in a panel
 
@@ -5,6 +6,28 @@
 atom-panel-container atom-text-editor.is-focused {
   .focus();
 }
+
+// atom-text-editor {
+//     background-color: @base-background-color;
+//     color: @syntax-text-color;
+//     
+//     .gutter {
+//         background-color: darken(@base-background-color, 1%);
+//         color: @syntax-gutter-text-color;
+// 
+//         .line-number {
+//             &.cursor-line {
+//                 opacity: 1;
+//                 background-color: lighten(@base-background-color, 8%);
+//                 color: @syntax-gutter-text-color-selected;
+//             }
+// 
+//             &.cursor-line-no-selection {
+//                 color: @syntax-gutter-text-color-selected;
+//             }
+//         }
+//     }
+// }
 
 
 // Mini
